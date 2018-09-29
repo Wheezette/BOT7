@@ -1,0 +1,20 @@
+{
+  "name": "cc-adv.detect",
+  "version": "1.0.0",
+  "description": "advertisements security",
+  "main": "main.js",
+  "dependencies": {
+    "discord.js": "^11.4.2",
+    "npm": "^6.4.1",
+    "parse-ms": "^2.0.0",
+    "quick.db": "^7.0.0-b15",
+    "quick.log": "^1.2.1",
+    "quick.log-discord": "^1.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "xCookieTM",
+  "license": "ISC"
+}
