@@ -1,6 +1,5 @@
 // Biblioteki
 const Discord = require("discord.js");
-const db = require('quick.db');
 //bot
 const client = new Discord.Client();
 
