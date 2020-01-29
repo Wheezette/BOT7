@@ -1,0 +1,69 @@
+#|---------|INFORMATION|---------|#
+# Script name: Lore
+# Script author: AlexSatellite
+# Script version: 1.2
+
+#|---------|INFORMATION|---------|#
+# ✲ You are allowed to change the source file for yourself
+# ✲ you aren't allowed to publish this file
+# ✲ You aren't allowed to sell this file
+# ✲ You aren't allowed to remove this copyright text
+
+
+#|---------|OPTIONS & MESSAGES|---------|#
+options:
+	logo: &e[&4Lore&dTools&e]
+	permissionlore: setlore.sk
+	permissionname: setname.sk
+	usageheader: &c-&f-&c-&f-&c-&f=&c= &9&oUsage&8 &c=&f=&c-&f-&c-&f-&c-
+	usagemessage1:&d/Lore &aSet &5Line &eNew-Lore.
+	usagemessage2:&d/Lore &cRemove &5Line.
+	usagemessage3:&d/setname &eNew-name.
+	errormessage: &cyou don't have permissions for this command.
+	successfulSet: &eYou have successful &aset &ethe lore.
+	successfulRemove: &eYou have successful &cremove &ethe lore.
+	successfulSetname: &eYou have successful &aset &ethe name.
+
+command /Lore [<text>] [<number>] [<text>]:
+	aliases: /l
+	trigger:
+		if player has permission "{@permissionlore}":
+			if arg 1 is not set:
+				message "{@usageheader}"
+				message "{@usagemessage1}"
+				message "{@usagemessage2}"
+				message "{@usagemessage3}"
+			else if arg 1 is "set":
+				if number arg is set:
+					if arg 3 is set:
+						set line number arg of lore of player's tool to "%colored arg 3%"
+						message "{@successfulSet}"
+			else if arg 1 is "remove":
+				if number arg is set:
+					set line number arg of lore of player's tool to ""
+					message "{@successfulRemove}"
+			else if arg 1 is "help":
+				message "{@usageheader}"
+				message "{@usagemessage1}"
+				message "{@usagemessage2}"
+				message "{@usagemessage3}"
+		else:
+			message "{@logo} {@errormessage}"
+			stop trigger
+
+command /setname [<text>]:
+	aliases: /n
+	trigger:
+		if player has permission "{@permissionname}":
+			if arg 1 is not set:
+				message "{@usageheader}"
+				message "{@usagemessage1}"
+				message "{@usagemessage2}"
+				message "{@usagemessage3}"
+			else:
+				set name of player's tool to "%colored arg 1%"
+				message "{@successfulSetname}"
+
+		else:
+			message "{@errormessage}"
+			stop trigger
