@@ -1,28 +1,15 @@
-#|---------|INFORMATION|---------|#
-# Script name: Lore
-# Script author: AlexSatellite
-# Script version: 1.2
-
-#|---------|INFORMATION|---------|#
-# ✲ You are allowed to change the source file for yourself
-# ✲ you aren't allowed to publish this file
-# ✲ You aren't allowed to sell this file
-# ✲ You aren't allowed to remove this copyright text
-
-
-#|---------|OPTIONS & MESSAGES|---------|#
 options:
-	logo: &e[&4Lore&dTools&e]
-	permissionlore: setlore.sk
-	permissionname: setname.sk
-	usageheader: &c-&f-&c-&f-&c-&f=&c= &9&oUsage&8 &c=&f=&c-&f-&c-&f-&c-
-	usagemessage1:&d/Lore &aSet &5Line &eNew-Lore.
-	usagemessage2:&d/Lore &cRemove &5Line.
-	usagemessage3:&d/setname &eNew-name.
+	logo: &9&lCL &8&l>>&7
+	permissionlore: craftland.setlore
+	permissionname: craftland.setname
+	usageheader: &c-&f-&c-&f-&c-&f=&c= &9&oUzycie&8 &c=&f=&c-&f-&c-&f-&c-
+	usagemessage1:&d/Lore &aUstaw nowa linijke.
+	usagemessage2:&d/Lore &cUsun linijke.
+	usagemessage3:&d/setname &eNowa nazwa.
 	errormessage: &cyou don't have permissions for this command.
-	successfulSet: &eYou have successful &aset &ethe lore.
-	successfulRemove: &eYou have successful &cremove &ethe lore.
-	successfulSetname: &eYou have successful &aset &ethe name.
+	successfulSet: &ePomyslnie ustawiono linijke.
+	successfulRemove: &ePomyslnie &cusunieto &elinijke.
+	successfulSetname: &ePomyslnie ustawiono nazwe.
 
 command /Lore [<text>] [<number>] [<text>]:
 	aliases: /l
